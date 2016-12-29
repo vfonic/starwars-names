@@ -6,6 +6,7 @@
   "scripts": {
     "check-coverage": "istanbul check-coverage --statements 95 --functions 95 --branches 95 --lines 95",
     "precommit": "npm test && npm run check-coverage",
+    "report-coverage": "codecov",
     "test": "istanbul cover -x **/*.test.js _mocha -- -R spec src/index.test.js",
     "test:watch": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "codecov": "^1.0.1",
     "husky": "^0.12.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
