@@ -4,7 +4,8 @@
   "description": "Get a random Star Wars name",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w",
+    "test": "mocha src/index.test.js",
+    "test:watch": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
