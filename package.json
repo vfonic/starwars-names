@@ -4,7 +4,8 @@
   "description": "Get a random Star Wars name",
   "main": "src/index.js",
   "scripts": {
-    "precommit": "npm test",
+    "check-coverage": "istanbul check-coverage --statements 95 --functions 95 --branches 95 --lines 95",
+    "precommit": "npm test && npm run check-coverage",
     "test": "istanbul cover -x **/*.test.js _mocha -- -R spec src/index.test.js",
     "test:watch": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
