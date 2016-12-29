@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "precommit": "npm test",
-    "test": "mocha src/index.test.js",
+    "test": "istanbul cover -x **/*.test.js _mocha -- -R spec src/index.test.js",
     "test:watch": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
