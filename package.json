@@ -12,7 +12,7 @@
     "precommit": "npm run cover && npm run check-coverage",
     "report-coverage": "codecov",
     "cover": "nyc npm t",
-    "test": "mocha src/index.test.js --compilers js:babel-register",
+    "test": "standard && mocha src/index.test.js --compilers js:babel-register",
     "test:watch": "npm t -- -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -43,6 +43,13 @@
       "es2015"
     ]
   },
+  "standard": {
+    "env": [ "mocha" ],
+    "globals": [
+      "it",
+      "describe"
+    ]
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-loader": "^6.2.10",
@@ -56,6 +63,7 @@
     "npm-run-all": "^3.1.2",
     "nyc": "^10.0.0",
     "semantic-release": "^6.3.2",
+    "standard": "^8.6.0",
     "webpack": "^1.14.0"
   }
 }
