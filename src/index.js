@@ -3,5 +3,6 @@ var uniqueRandomArray = require('unique-random-array');
 
 module.exports = {
 	all: starWarsNames,
-	random: uniqueRandomArray(starWarsNames)
+	random: uniqueRandomArray(starWarsNames),
+	first: starWarsNames[0]
 }
